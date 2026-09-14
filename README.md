@@ -10,3 +10,4 @@ notion: https://app.notion.com/p/99a770859c184f63bf420638d0ef1160
 
 - **[01_Python_Basics](./01_Python_Basics/)** : 기본 문법 및 기초 문제 풀이 (q01 ~ q12)
 - **[01_Python_mini_project](./01_Python_mini_project/)** : 기초 활용 미니프로젝트 (카페 주문, 학점 계산기 등)
+- **[02_1_Machine_Learning](./02_1_Machine_Learning/)** : 머신 러닝 실습 코드
