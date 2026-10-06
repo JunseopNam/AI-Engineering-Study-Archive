@@ -39,7 +39,7 @@ for i in range(iterations):
     final_output = sigmoid(final_input)
 
     # 오차 계산
-    error = y - final_output
+    error = -(y - final_output)
 
     # 역전파
     d_output = error * sigmoid_derivative(final_output) # 출력층의 gradient
@@ -47,8 +47,8 @@ for i in range(iterations):
     d_hidden = error_hidden * sigmoid_derivative(hidden_output) # 은닉층의 gradient
 
     # 가중치 업데이트
-    weights_hidden_output += hidden_output.T.dot(d_output) * learning_rate
-    weights_input_hidden += X.T.dot(d_hidden) * learning_rate
+    weights_hidden_output -= hidden_output.T.dot(d_output) * learning_rate
+    weights_input_hidden -= X.T.dot(d_hidden) * learning_rate
 
     # 학습 상태 출력 (100,000번 마다)
     if i % 100000 == 0:
