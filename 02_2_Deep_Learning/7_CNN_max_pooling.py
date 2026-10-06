@@ -30,7 +30,7 @@ def max_pooling_2x2(relu):
 
     out_rows = relu_rows // window_size
     out_cols = relu_cols // window_size
-    new_array = np.array([[0.0 for _ in range(out_cols)] for _ in range(out_rows)])
+    new_array = np.array([[0 for _ in range(out_cols)] for _ in range(out_rows)])
     for r in range(out_rows):
             for c in range(out_cols):
                 window = relu[r * window_size : r * window_size + window_size, c * window_size : c * window_size + window_size]
